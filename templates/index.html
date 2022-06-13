@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+
+<body>
+    <div class="form-singup">
+        <form action="/add_medicina" method="POST">
+            <div class="input-field">
+                <input class="controls" type="text" name="nombre" placeholder="Ingrese su nombre" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="apellido" placeholder="Ingrese su apellido" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="doreccion" placeholder="Ingrese su direccion" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="number" name="numeroTele" placeholder="Ingrese su numero" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="edad" placeholder="Edad de la persona" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="peso" placeholder="Su peso" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="altura" placeholder="Su altura" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="enfermedades" placeholder="Enfermedades tratables" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="medicacion" placeholder="Medicaciones" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+                <input class="controls" type="text" name="condicion" placeholder="Condiciones incurables" required>
+                <i class="uil uil-user"></i>
+            </div>
+            <button class="botons" type=' submit '>
+                Save
+            </button>
+            <button class="botons">
+                <a href="/medicina">Return</a>
+            </button>
+        </form>
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #27213dc3;
+    }
+    
+    .form-singup {
+        position: relative;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .botons {
+        width: 80%;
+        background: #1f53c5;
+        border: none;
+        padding: 8px;
+        color: white;
+        margin: 4px 0;
+        font-size: 16px;
+    }
+    
+    .controls {
+        width: 100%;
+        background: #24303c;
+        padding: 6px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        border: 1px solid #1f53c5;
+        font-family: 'calibri';
+        font-size: 18px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .input-field {
+        position: relative;
+        height: 100%;
+        width: 80%;
+        padding: 2px 10px;
+        outline: none;
+        font-size: 12px;
+        border-left: 2px solid #ccc;
+        border-right: 2px solid #ccc;
+        border-bottom: 2px solid #ccc;
+        border-top: 2px solid #ccc;
+        transition: all 0.2s ease;
+        background: #24303c;
+        box-shadow: 7px 13px 37px #000;
+    }
+</style>
+
+</html>

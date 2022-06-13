@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medicina</title>
+</head>
+
+<body>
+    <div class="tabla">
+        <table id="medicina">
+            <thead>
+                <tr>
+                    <td class="name">Nombre</td>
+                    <td class="name">Apellido</td>
+                    <td class="name">Fecha de pedido</td>
+                </tr>
+            </thead>
+            <tbody> {%for medicina in medicinas%}
+                <tr onclick="getIndex(this);">
+                    <td class=" name " id="id " onclick="getindex(this); "> {{ medicina.nombre }}
+                    </td>
+                    <td class="name "> {{ medicina.apellido }}
+                    </td>
+                    <td class=" name "> {{ medicina.fecha }}
+                    </td>
+                </tr> {%endfor%}
+            </tbody>
+        </table>
+        <p>Redirigiendo a indice:</p>
+        <span id="index"></span>
+        <script type="text/javascript ">
+            function getIndex(x) {
+                document.getElementById('index').textContent = x.rowIndex;
+                var id = document.getElementById('index').textContent = x.rowIndex;
+                location.href = `/medicina/${document.getElementById('index').textContent = x.rowIndex}/`
+            }
+        </script>
+
+</body>
+<div>
+    <a class="botons" href="/all">
+        Add
+    </a>
+</div>
+
+
+</html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #27213dc3;
+    }
+    
+    .botons {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        background: #1f53c5;
+        border: none;
+        padding: 16px;
+        color: white;
+        margin: 16px 0;
+        font-size: 20px;
+    }
+    
+    .name {
+        align-items: center;
+        justify-content: center;
+        padding: 16px 16px;
+        background: #24303c;
+        padding: 30px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        border: 4px solid #1f53c5;
+        font-family: 'calibri';
+        font-size: 22px;
+        color: white;
+    }
+    
+    .tabla {
+        border-left: 4px solid #ccc;
+        border-right: 4px solid #ccc;
+        border-bottom: 4px solid #ccc;
+        border-top: 4px solid #ccc;
+        background: #24303c;
+    }
+    
+    @media screen and (max-width: 900px) {
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4019cbc3;
+        }
+        .botons {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            background: #1f53c5;
+            border: none;
+            padding: 10px;
+            color: white;
+            margin: 16px 0;
+            font-size: 20px;
+        }
+        .name {
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10px;
+            background: #24303c;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            border: 3px solid #1f53c5;
+            font-family: 'calibri';
+            font-size: 20px;
+            color: white;
+        }
+        .tabla {
+            border-left: 3px solid #ccc;
+            border-right: 3px solid #ccc;
+            border-bottom: 3px solid #ccc;
+            border-top: 3px solid #ccc;
+            background: #24303c;
+        }
+        @media screen and (max-width: 550px) {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+            body {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #45cb19c3;
+            }
+            .botons {
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 50px;
+                border: none;
+                padding: 12px;
+                color: white;
+                margin: 16px 0;
+                font-size: 16px;
+            }
+            .name {
+                align-items: center;
+                justify-content: center;
+                padding: 6px 6px;
+                background: #24303c;
+                padding: 6px;
+                border-radius: 2px;
+                margin-bottom: 6px;
+                border: 1px solid #1f53c5;
+                font-family: 'calibri';
+                font-size: 16px;
+                color: white;
+            }
+            .tabla {
+                width: max-content;
+                border-left: 2px solid #ccc;
+                border-right: 2px solid #ccc;
+                border-bottom: 2px solid #ccc;
+                border-top: 2px solid #ccc;
+                background: #24303c;
+            }
+        }
+    }
+</style>
